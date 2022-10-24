@@ -5,7 +5,7 @@
 | ------------------ | ------ | ----------- |
 | name               | string | null: false |
 | email              | string | null: false |
-| birthday           | string | null: false |
+| birthday           | date   | null: false |
 | encrypted_password | string | null: false |
 | firstname          | string | null: false |
 | lastname           | string | null: false |
@@ -20,17 +20,17 @@
 
 
 ## items テーブル
-| Column             | Type   | Options     |
-| ------------------ | ------ | ----------- |
-| name               | string | null: false |
-| price              | string | null: false |
-| user               | string | null: false |
-| detail             | string | null: false |
-| state              | string | null: false |
-| area               | string | null: false |
-| category           | string | null: false |
-| day                | string | null: false |
-| burden             | string | null: false |
+| Column             | Type       | Options     |
+| ------------------ | ---------- | ----------- |
+| name               | string     | null: false |
+| price              | integer    | null: false |
+| user               | references | null: false |
+| detail             | text       | null: false |
+| state              | integer    | null: false |
+| area               | integer    | null: false |
+| category           | integer    | null: false |
+| day                | integer    | null: false |
+| burden             | integer    | null: false |
 
 ### Association
 - belongs_to :user
@@ -53,15 +53,15 @@
 
 
 ## addressess テーブル
-| Column             | Type   | Options     |
-| ------------------ | ------ | ----------- |
-| postal             | string | null: false |
-| area               | string | null: false |
-| city               | string | null: false |
-| block              | string | null: false |
-| building           | string | null: false |
-| number             | string | null: false |
-| order              | string | null: false |
+| Column             | Type       | Options     |
+| ------------------ | ---------- | ----------- |
+| postal             | string     | null: false |
+| area               | string     | null: false |
+| city               | string     | null: false |
+| block              | string     | null: false |
+| building           | string     | null: false |
+| number             | string     | null: false |
+| order              | references | null: false |
 
 ### Association
 - belongs_to :order
