@@ -1,71 +1,53 @@
 # テーブル設計
 
 ## users テーブル
+
 | Column             | Type   | Options     |
 | ------------------ | ------ | ----------- |
 | name               | string | null: false |
 | email              | string | null: false |
-| birthday           | string | null: false |
 | encrypted_password | string | null: false |
-| firstname          | string | null: false |
-| lastname           | string | null: false |
-| firstname_kana     | string | null: false |
-| lastname_kana      | string | null: false |
 
 ### Association
-- has_many :items
-- has_many :orders
 
+- has_many :room_users
+- has_many :rooms, through: :room_users
+- has_many :messages
 
+## rooms テーブル
 
-
-## items テーブル
-| Column             | Type   | Options     |
-| ------------------ | ------ | ----------- |
-| name               | string | null: false |
-| price              | string | null: false |
-| user               | string | null: false |
-| detail             | string | null: false |
-| state              | string | null: false |
-| area               | string | null: false |
-| category           | string | null: false |
-| day                | string | null: false |
-| burden             | string | null: false |
+| Column | Type   | Options     |
+| ------ | ------ | ----------- |
+| name   | string | null: false |
 
 ### Association
+
+- has_many :room_users
+- has_many :users, through: :room_users
+- has_many :messages
+
+## room_users テーブル
+
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| user   | references | null: false, foreign_key: true |
+| room   | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :room
 - belongs_to :user
-- has_one :order
 
+## messages テーブル
 
-
-
-## orders テーブル
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
+| content | string     |                                |
 | user    | references | null: false, foreign_key: true |
-| item    | references | null: false, foreign_key: true |
+| room    | references | null: false, foreign_key: true |
 
 ### Association
+
+- belongs_to :room
 - belongs_to :user
-- belongs_to :item
-
-
-
-
-## addressess テーブル
-| Column             | Type   | Options     |
-| ------------------ | ------ | ----------- |
-| postal             | string | null: false |
-| area               | string | null: false |
-| city               | string | null: false |
-| block              | string | null: false |
-| building           | string | null: false |
-| number             | string | null: false |
-| order              | string | null: false |
-
-### Association
-- belongs_to :order
-
-
-
 
