@@ -30,6 +30,7 @@
 | area               | string | null: false |
 | category           | string | null: false |
 | day                | string | null: false |
+| burden             | string | null: false |
 
 ### Association
 - belongs_to :user
