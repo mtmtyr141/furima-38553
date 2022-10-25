@@ -57,9 +57,9 @@
 | postal             | string    | null: false                   |
 | area_id            | integer   | null: false                   |
 | city               | string    | null: false                   |
-| block              | string    | null: false                   |
-| building           | string    |                               |
-| number             | string    | null: false                   |
+| block              | integer   | null: false                   |
+| building           | integer   |                               |
+| number             | integer   | null: false                   |
 | order              | references| null: false, foreign_key:true |
 
 ### Association
