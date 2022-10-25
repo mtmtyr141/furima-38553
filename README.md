@@ -52,15 +52,15 @@
 
 
 ## addressess テーブル
-| Column             | Type   | Options     |
-| ------------------ | ------ | ----------- |
-| postal             | string | null: false |
-| area_id            | integer| null: false |
-| city               | string | null: false |
-| block              | string | null: false |
-| building           | string |             |
-| number             | string | null: false |
-| order              | string | null: false |
+| Column             | Type      | Options                       |
+| ------------------ | --------- | ----------------------------- |
+| postal             | string    | null: false                   |
+| area_id            | integer   | null: false                   |
+| city               | string    | null: false                   |
+| block              | string    | null: false                   |
+| building           | string    |                               |
+| number             | string    | null: false                   |
+| order              | references| null: false, foreign_key:true |
 
 ### Association
 - belongs_to :order
