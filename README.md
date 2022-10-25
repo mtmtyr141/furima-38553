@@ -59,7 +59,7 @@
 | city               | string    | null: false                   |
 | block              | integer   | null: false                   |
 | building           | integer   |                               |
-| number             | integer   | null: false                   |
+| number             | string    | null: false                   |
 | order              | references| null: false, foreign_key:true |
 
 ### Association
