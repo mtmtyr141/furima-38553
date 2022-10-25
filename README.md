@@ -23,7 +23,7 @@
 | Column             | Type   | Options     |
 | ------------------ | ------ | ----------- |
 | name               | string | null: false |
-| price              | string | null: false |
+| price              | integer| null: false |
 | user               | string | null: false |
 | detail             | string | null: false |
 | state              | string | null: false |
