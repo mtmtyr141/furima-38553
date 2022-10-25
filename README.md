@@ -55,7 +55,7 @@
 | Column             | Type   | Options     |
 | ------------------ | ------ | ----------- |
 | postal             | string | null: false |
-| area               | string | null: false |
+| area_id            | integer| null: false |
 | city               | string | null: false |
 | block              | string | null: false |
 | building           | string |             |
