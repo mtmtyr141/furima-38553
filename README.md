@@ -57,7 +57,7 @@
 | area               | string | null: false |
 | city               | string | null: false |
 | block              | string | null: false |
-| building           | string | null: false |
+| building           | string |             |
 | number             | string | null: false |
 | order              | string | null: false |
 
