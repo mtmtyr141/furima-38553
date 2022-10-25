@@ -25,7 +25,7 @@
 | name               | string | null: false |
 | price              | integer| null: false |
 | user               | string | null: false |
-| detail             | string | null: false |
+| detail             | text   | null: false |
 | state              | string | null: false |
 | area               | string | null: false |
 | category           | string | null: false |
