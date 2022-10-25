@@ -57,7 +57,7 @@
 | postal             | string    | null: false                   |
 | area_id            | integer   | null: false                   |
 | city               | string    | null: false                   |
-| block              | integer   | null: false                   |
+| block              | string    | null: false                   |
 | building           | string    |                               |
 | number             | string    | null: false                   |
 | order              | references| null: false, foreign_key:true |
