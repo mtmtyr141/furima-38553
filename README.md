@@ -2,16 +2,16 @@
 
 
 ## users テーブル
-| Column             | Type   | Options     |
-| ------------------ | ------ | ----------- |
-| name               | string | null: false |
-| email              | string | null: false |
-| birthday           | date   | null: false |
-| encrypted_password | string | null: false |
-| firstname          | string | null: false |
-| lastname           | string | null: false |
-| firstname_kana     | string | null: false |
-| lastname_kana      | string | null: false |
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| name               | string | null: false               |
+| email              | string | null: false, unique: true |
+| birthday           | date   | null: false               |
+| encrypted_password | string | null: false               |
+| firstname          | string | null: false               |
+| lastname           | string | null: false               |
+| firstname_kana     | string | null: false               |
+| lastname_kana      | string | null: false               |
 
 ### Association
 - has_many :items
