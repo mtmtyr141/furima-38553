@@ -13,7 +13,6 @@ class User < ApplicationRecord
          validates :lastname_kana
          end
 
-
          has_many :items
          has_many :orders
 
