@@ -6,6 +6,12 @@ RSpec.describe User, type: :model do
 
   describe 'ユーザー新規登録' do
 
+    context '新規登録ができる場合' do
+      it '全ての情報が正しく入力されているとき登録できること' do
+        expect(@user).to be_valid
+      end
+    end
+
     context '新規登録できない場合' do
 
       it "nameが空では登録できない" do
@@ -37,8 +43,6 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include('Password is too short (minimum is 6 characters)')
       end
-
-      
 
       it 'passwordとpassword_confirmationは値の一致が必須であること' do
         @user.password_confirmation = ''
