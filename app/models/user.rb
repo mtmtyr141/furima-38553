@@ -17,8 +17,8 @@ class User < ApplicationRecord
           validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'is invalid. Input half-width characters.' }
          end
          
-         has_many :items
-         has_many :orders
+         #has_many :items
+         #has_many :orders
 
 
 end
