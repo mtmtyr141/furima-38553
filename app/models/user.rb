@@ -7,8 +7,6 @@ class User < ApplicationRecord
          with_options presence: true do
           validates  :name
           validates :birthday
-         
-         
           validates :firstname, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/, message: "is invalid. Input full-width characters."}
           validates :lastname,  format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/, message: "is invalid. Input full-width characters."}
           validates :firstname_kana, format: { with: /\A[ァ-ヶー-]+\z/, message: "is invalid. Input full-width katakana characters."}
@@ -17,7 +15,7 @@ class User < ApplicationRecord
           validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'is invalid. Input half-width characters.' }
          end
          
-         #has_many :items
+         has_many :items
          #has_many :orders
 
 
