@@ -81,14 +81,6 @@ RSpec.describe Item, type: :model do
         expect(@item.errors.full_messages).to include("Image can't be blank")
       end
 
-
-      it 'priceの値が300~9999999までの整数でないと登録できない' do
-        @item.price = '10'
-        @item.valid?
-        expect(@item.errors.full_messages).to include('Price is invalid')
-      end
-
-
       it '金額は300円未満では登録できない' do
         @item.price = 299
         @item.valid?
@@ -106,7 +98,7 @@ RSpec.describe Item, type: :model do
       end
 
       it 'category_idのカラムは---では登録できない' do
-        @item.category_id = '0'
+        @item.category_id = '1'
         @item.valid?
         expect(@item.errors.full_messages).to include("Category can't be blank")
       end
@@ -114,22 +106,22 @@ RSpec.describe Item, type: :model do
 
 
       it 'burdenのカラムが---では登録できない' do
-        @item.burden_id = '0'
+        @item.burden_id = '1'
         @item.valid?
         expect(@item.errors.full_messages).to include("Burden can't be blank")
       end
       it 'area_idのカラムが---では登録できない' do
-        @item.area_id = '0'
+        @item.area_id = '1'
         @item.valid?
         expect(@item.errors.full_messages).to include("Area can't be blank")
       end
       it 'stateのカラムが---では登録できない' do
-        @item.state_id = '0'
+        @item.state_id = '1'
         @item.valid?
         expect(@item.errors.full_messages).to include("State can't be blank")
       end
       it 'dayのカラムが---では登録できない' do
-        @item.day_id = '0'
+        @item.day_id = '1'
         @item.valid?
         expect(@item.errors.full_messages).to include("Day can't be blank")
       end
