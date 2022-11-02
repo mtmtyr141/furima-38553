@@ -2,7 +2,7 @@ class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :user 
   belongs_to :burden
-  has_one :order  
+  #has_one :order  
   has_one_attached :image
 
   with_options presence: true do
